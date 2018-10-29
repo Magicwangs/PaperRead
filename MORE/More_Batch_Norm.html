@@ -17,15 +17,23 @@
     
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search-plus/search.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-highlight/website.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-search/search.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
                 
             
                 
-                <link rel="stylesheet" href="../gitbook/gitbook-plugin-fontsettings/website.css">
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-theme-comscore/test.css">
                 
             
         
@@ -83,7 +91,7 @@
     
         
         <li>
-            <a href="blog.magicwang.tech" target="_blank" class="custom-link">MagicWang's Blog</a>
+            <a href="http://blog.magicwang.tech" target="_blank" class="custom-link">Home</a>
         </li>
     
     
@@ -239,7 +247,7 @@
                     <div class="page-wrapper" tabindex="-1" role="main">
                         <div class="page-inner">
                             
-<div id="book-search-results">
+<div class="search-plus" id="book-search-results">
     <div class="search-noresults">
     
                                 <section class="normal markdown-section">
@@ -298,7 +306,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Batch Norm","level":"1.5.1","depth":2,"previous":{"title":"MORE","level":"1.5","depth":1,"path":"MORE/README.md","ref":"MORE/README.md","articles":[{"title":"Batch Norm","level":"1.5.1","depth":2,"path":"MORE/More_Batch_Norm.md","ref":"MORE/More_Batch_Norm.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":[],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"highlight":{},"search":{},"lunr":{"maxIndexSize":1000000,"ignoreSpecialCharacters":false},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Magic Wang <magicwang@zju.edu.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sharing":{"all":null,"facebook":null,"google":null,"twitter":null,"weibo":null},"sidebar":{"MagicWang's Blog":"blog.magicwang.tech"}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"MORE/More_Batch_Norm.md","mtime":"2018-10-29T13:00:56.803Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-29T13:41:09.558Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Batch Norm","level":"1.5.1","depth":2,"previous":{"title":"MORE","level":"1.5","depth":1,"path":"MORE/README.md","ref":"MORE/README.md","articles":[{"title":"Batch Norm","level":"1.5.1","depth":2,"path":"MORE/More_Batch_Norm.md","ref":"MORE/More_Batch_Norm.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","theme-comscore","-lunr","-search","search-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"expandable-chapters-small":{},"search-plus":{},"highlight":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Magic Wang <magicwang@zju.edu.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sidebar":{"Home":"http://blog.magicwang.tech"}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"MORE/More_Batch_Norm.md","mtime":"2018-10-29T13:00:56.803Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-29T14:10:39.162Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -308,19 +316,15 @@
     <script src="../gitbook/theme.js"></script>
     
         
-        <script src="../gitbook/gitbook-plugin-search/search-engine.js"></script>
+        <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-search/search.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/jquery.mark.min.js"></script>
         
     
         
-        <script src="../gitbook/gitbook-plugin-lunr/lunr.min.js"></script>
-        
-    
-        
-        <script src="../gitbook/gitbook-plugin-lunr/search-lunr.js"></script>
+        <script src="../gitbook/gitbook-plugin-search-plus/search.js"></script>
         
     
         
@@ -329,6 +333,10 @@
     
         
         <script src="../gitbook/gitbook-plugin-fontsettings/fontsettings.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-theme-comscore/test.js"></script>
         
     
 
