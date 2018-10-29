@@ -11,9 +11,9 @@
             "twitter": null,
             "weibo": null
         },
-        "sidebar": {
-            "MagicWang's Blog": "blog.magicwang.tech"
-        }
+#        "sidebar": {
+#            "MagicWang's Blog": "http://blog.magicwang.tech"
+#        }
     },
     "output": null,
     "pdf": {
