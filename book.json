@@ -4,13 +4,9 @@
     "extension": null,
     "generator": "site",
     "links": {
-        "sharing": {
-            "all": null,
-            "facebook": null,
-            "google": null,
-            "twitter": null,
-            "weibo": null
-        },
+        "sidebar": {
+            "Home" : "http://blog.magicwang.tech"
+        }
     },
     "output": null,
     "pdf": {
@@ -26,7 +22,9 @@
         "pageNumbers": false,
         "paperSize": "a4"
     },
-    "plugins": [],
+    "plugins": ["expandable-chapters-small",
+                "theme-comscore",
+                "-lunr", "-search", "search-plus"],
     "title": "Sample GitBook",
     "variables": {}
 }
