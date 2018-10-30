@@ -26,15 +26,15 @@ the feature contrast.
 - **Top-Down** 结构则 负责产生 高分辨率的Dense的结果   
 - **Skip-Connect** 结构来帮助信息的融合    
   
-#### 由两个分支组成
+#### Trunk Branch and Mask Branch
 - **Trunk主干分支**: PreAct 的残差块(Resnet V2)  -- **T(x)**
 - **Mask分支**: bottom-up top-down 结构 --和 T(x) 相同Size的 **M(x)**
 - 最终 $$H(x) = M(x)*T(x)$$ 直接点乘    
   
 #### WHY
 - 如果只是简单的堆叠Attention模块,会导致性能的下降
-    - 因为 mask的值(经过sigmoid)是 0-1, **反复的乘以 这个mask** 会导致 feature map的值越来越小    
-    - soft mask 可能会 破坏 主干分支的特性    
+    - 因为 mask的值(经过sigmoid)是 0-1, **反复的乘以这个mask** 会导致 feature map的值越来越小    
+    - soft mask 可能会破坏Trunk分支的特征     
 - 所以最终 $$H(x) = (1+M(x)) * F(x)$$ 其中 $$0<M(x)<1$$  
 - 希望 mask能够抑制主干分支的噪声, 增强重要的特征  
   
