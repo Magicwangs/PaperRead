@@ -35,6 +35,7 @@ the feature contrast.
 - 如果只是简单的堆叠Attention模块,会导致性能的下降
     - 因为 mask的值(经过sigmoid)是 0-1, **反复的乘以这个mask** 会导致 feature map的值越来越小    
     - soft mask 可能会破坏Trunk分支的特征     
+  
 - 所以最终 $$H(x) = (1+M(x)) * F(x)$$ 其中 $$0<M(x)<1$$  
 - 希望 mask能够抑制主干分支的噪声, 增强重要的特征  
   
