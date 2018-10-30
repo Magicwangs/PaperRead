@@ -8,14 +8,17 @@
 
 
 ### Motivation
-- Attention机制不仅仅可以帮助定位, 还可以增强物体在不同位置的表达  
+
+- Attention机制不仅仅可以帮助channel的加强, 还可以增强物体在不同位置的表达   
   
 ### HOW
-- Bottom-up top-down feedforward attention
-    - 使用类似于Stacked Hourglass 沙漏型的结构 在feature map上增加一个soft weight 
-    - **Bottem-up** 结构产生了低分辨率但是强语义信息的Feature Map
-    - **Top-Down** 结构则 负责产生 高分辨率的Dense的结果
-    - **Skip-Connect** 结构来帮助信息的融合  
+
+- **Bottom-up top-down feedforward attention**
+    - 使用类似于Stacked Hourglass 沙漏型的结构 在feature map上增加一个soft weight  
+    - **Bottem-up** 结构产生了低分辨率但是强语义信息的Feature Map  
+    - **Top-Down** 结构则 负责产生 高分辨率的Dense的结果   
+    - **Skip-Connect** 结构来帮助信息的融合    
+  
 - 由两个分支组成
     - **Trunk主干分支**: 预激活的残差块(Resnet V2)  -- **T(x)**
     - **Mask分支**: bottom-up top-down 结构 --和 T(x) 相同Size的 **M(x)**
