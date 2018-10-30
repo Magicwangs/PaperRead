@@ -27,7 +27,6 @@
                 "theme-comscore",
                 "page-footer-ex",
                 "katex",
-                "anchors",
                 "anchor-navigation-ex",
                 "-highlight", "prism", "prism-themes",
                 "-lunr", "-search", "search-plus"],
