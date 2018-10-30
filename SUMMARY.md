@@ -7,4 +7,5 @@
 * [3D](3D/README.md)
 * [MORE](MORE/README.md)
     * [Batch Norm](MORE/More_Batch_Norm.md)
+    * [About GitBook](MORE/AboutGitBook.md)
 
