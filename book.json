@@ -24,7 +24,15 @@
     },
     "plugins": ["expandable-chapters-small",
                 "theme-comscore",
+                "-highlight", "prism", "prism-themes",
                 "-lunr", "-search", "search-plus"],
+    "pluginsConfig": {
+        "prism": {
+            "css": [
+                "prismjs/themes/prism-ghcolors.css"
+            ]
+        }
+    },
     "title": "Sample GitBook",
     "variables": {}
 }
