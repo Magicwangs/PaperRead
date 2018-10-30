@@ -274,14 +274,12 @@
 <li>Attention&#x673A;&#x5236;&#x4E0D;&#x4EC5;&#x4EC5;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;channel&#x7684;&#x52A0;&#x5F3A;, &#x8FD8;&#x53EF;&#x4EE5;&#x589E;&#x5F3A;&#x7269;&#x4F53;&#x5728;&#x4E0D;&#x540C;&#x4F4D;&#x7F6E;&#x7684;&#x8868;&#x8FBE;   </li>
 </ul>
 <h3 id="how"><a name="how" class="anchor-navigation-ex-anchor" href="#how"><i class="fa fa-link" aria-hidden="true"></i></a>HOW</h3>
-<ul>
-<li><p><strong>Bottom-up top-down feedforward attention</strong></p>
+<h4 id="bottom-up-top-down-feedforward-attention"><a name="bottom-up-top-down-feedforward-attention" class="anchor-navigation-ex-anchor" href="#bottom-up-top-down-feedforward-attention"><i class="fa fa-link" aria-hidden="true"></i></a><strong>Bottom-up top-down feedforward attention</strong></h4>
 <ul>
 <li>&#x4F7F;&#x7528;&#x7C7B;&#x4F3C;&#x4E8E;Stacked Hourglass &#x6C99;&#x6F0F;&#x578B;&#x7684;&#x7ED3;&#x6784; &#x5728;feature map&#x4E0A;&#x589E;&#x52A0;&#x4E00;&#x4E2A;soft weight  </li>
 <li><strong>Bottem-up</strong> &#x7ED3;&#x6784;&#x4EA7;&#x751F;&#x4E86;&#x4F4E;&#x5206;&#x8FA8;&#x7387;&#x4F46;&#x662F;&#x5F3A;&#x8BED;&#x4E49;&#x4FE1;&#x606F;&#x7684;Feature Map  </li>
 <li><strong>Top-Down</strong> &#x7ED3;&#x6784;&#x5219; &#x8D1F;&#x8D23;&#x4EA7;&#x751F; &#x9AD8;&#x5206;&#x8FA8;&#x7387;&#x7684;Dense&#x7684;&#x7ED3;&#x679C;   </li>
-<li><strong>Skip-Connect</strong> &#x7ED3;&#x6784;&#x6765;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;&#x7684;&#x878D;&#x5408;    </li>
-</ul>
+<li><p><strong>Skip-Connect</strong> &#x7ED3;&#x6784;&#x6765;&#x5E2E;&#x52A9;&#x4FE1;&#x606F;&#x7684;&#x878D;&#x5408;    </p>
 </li>
 <li><p>&#x7531;&#x4E24;&#x4E2A;&#x5206;&#x652F;&#x7EC4;&#x6210;</p>
 <ul>
@@ -290,7 +288,8 @@
 <li>&#x6700;&#x7EC8; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>M</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&#x2217;</mo><mi>T</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">H(x) = M(x)*T(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span> &#x76F4;&#x63A5;&#x70B9;&#x4E58;    </li>
 </ul>
 </li>
-<li>Attention Residual Learning<ul>
+<li><p>Attention Residual Learning</p>
+<ul>
 <li>&#x5982;&#x679C;&#x53EA;&#x662F;&#x7B80;&#x5355;&#x7684;&#x5806;&#x53E0;Attention&#x6A21;&#x5757;,&#x56DE;&#x5BFC;&#x81F4;&#x6027;&#x80FD;&#x7684;&#x4E0B;&#x964D;<ul>
 <li>&#x56E0;&#x4E3A; mask&#x7684;&#x503C;(&#x7ECF;&#x8FC7;sigmoid)&#x662F; 0-1, &#x53CD;&#x590D;&#x7684;&#x4E58;&#x4EE5; &#x8FD9;&#x4E2A;mask &#x4F1A;&#x5BFC;&#x81F4; feature map&#x7684;&#x503C;&#x8D8A;&#x6765;&#x8D8A;&#x5C0F;  </li>
 <li>soft mask &#x53EF;&#x80FD;&#x4F1A; &#x7834;&#x574F; &#x4E3B;&#x5E72;&#x5206;&#x652F;&#x7684;&#x7279;&#x6027;  </li>
@@ -299,18 +298,20 @@
 <li>&#x6240;&#x4EE5;&#x6700;&#x7EC8; $H(x) = (1+M(x)) * F(x) $ &#x5176;&#x4E2D; $0&lt;M(x)&lt;1 $</li>
 </ul>
 </li>
-<li>&#x5E0C;&#x671B; mask&#x80FD;&#x591F;&#x6291;&#x5236;&#x4E3B;&#x5E72;&#x5206;&#x652F;&#x7684;&#x566A;&#x58F0;, &#x589E;&#x5F3A;&#x91CD;&#x8981;&#x7684;&#x7279;&#x5F81;  </li>
-<li><strong>Soft Mask Branch</strong><ul>
+<li><p>&#x5E0C;&#x671B; mask&#x80FD;&#x591F;&#x6291;&#x5236;&#x4E3B;&#x5E72;&#x5206;&#x652F;&#x7684;&#x566A;&#x58F0;, &#x589E;&#x5F3A;&#x91CD;&#x8981;&#x7684;&#x7279;&#x5F81;  </p>
+</li>
+<li><p><strong>Soft Mask Branch</strong></p>
+<ul>
 <li>&#x4F7F;&#x7528; max-pool&#x6765;&#x964D;&#x4F4E;&#x589E;&#x5927;&#x611F;&#x53D7;&#x91CE;,&#x53CC;&#x7EBF;&#x6027;&#x63D2;&#x503C;&#x6765;&#x589E;&#x5927;&#x5206;&#x8FA8;&#x7387; bottom-up&#x548C;top-down&#x5BF9;&#x79F0;   </li>
 <li>Mask&#x5206;&#x652F;&#x7684;&#x4E3B;&#x8981;&#x76EE;&#x7684;&#x8FD8;&#x662F;&#x589E;&#x5F3A; Trunk&#x5206;&#x652F;<br><img src="IMAGE/Screenshot-20181022175409-424x590.png" alt="drawing" width="300"></li>
 </ul>
 </li>
-<li><strong>Spatial</strong> Attention and <strong>Channel</strong> Attention<ul>
+<li><p><strong>Spatial</strong> Attention and <strong>Channel</strong> Attention</p>
+<ul>
 <li>&#x53EA;&#x9700;&#x8981;&#x901A;&#x8FC7;&#x4E00;&#x4E2A; sigmoid &#x5C31;&#x80FD;&#x5B9E;&#x73B0;&#x6700;&#x4F73;&#x7684;&#x6548;&#x679C;  </li>
 <li>&#x4E0D;&#x9700;&#x8981; SENet&#x90A3;&#x6837;&#x7684; &#x4EC5;&#x5BF9;&#x901A;&#x9053; weight&#x6216;&#x662F;&#x4EC5;&#x5BF9;&#x7A7A;&#x95F4; weight</li>
-</ul>
-</li>
-<li>Point<blockquote>
+<li><h3 id="keyword"><a name="keyword" class="anchor-navigation-ex-anchor" href="#keyword"><i class="fa fa-link" aria-hidden="true"></i></a>KeyWord</h3>
+<blockquote>
 <p>The
 Attention Module is designed to <strong>suppress noise</strong> while <strong>keeping useful information</strong> by applying <strong>dot product between feature and soft mask</strong>.<br>However, <strong>repeated dot product</strong> will lead
 to <strong>severe degradation</strong> of both useful and useless information
@@ -321,7 +322,9 @@ the feature contrast. </p>
 </blockquote>
 </li>
 </ul>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://blog.magicwang.tech" target="_blank">MagicWang</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2018-10-30 14:29:16 </span> </footer>
+</li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://blog.magicwang.tech" target="_blank">MagicWang</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2018-10-30 14:31:57 </span> </footer>
                                 
                                 </section>
                             
@@ -364,7 +367,7 @@ the feature contrast. </p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Residual Attention Network for Image Classification","level":"1.2.1","depth":2,"next":{"title":"DETECTION","level":"1.3","depth":1,"path":"DETECTION/README.md","ref":"DETECTION/README.md","articles":[]},"previous":{"title":"BASENET","level":"1.2","depth":1,"path":"BASENET/README.md","ref":"BASENET/README.md","articles":[{"title":"Residual Attention Network for Image Classification","level":"1.2.1","depth":2,"path":"BASENET/Residual_Attention_Network_for_Image_Classification.md","ref":"BASENET/Residual_Attention_Network_for_Image_Classification.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","toggle-chapters","theme-comscore","page-footer-ex","katex","github","-sharing","sharing-plus","anchor-navigation-ex","-highlight","prism","prism-themes","-lunr","-search","search-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/Magicwangs"},"page-footer-ex":{"copyright":"By [MagicWang](http://blog.magicwang.tech)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"sharing":{"qq":false,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"search-plus":{}},"theme":"default","author":"Magic Wang <magicwang@zju.edu.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"BASENET/Residual_Attention_Network_for_Image_Classification.md","mtime":"2018-10-30T06:29:16.962Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-30T06:29:21.515Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Residual Attention Network for Image Classification","level":"1.2.1","depth":2,"next":{"title":"DETECTION","level":"1.3","depth":1,"path":"DETECTION/README.md","ref":"DETECTION/README.md","articles":[]},"previous":{"title":"BASENET","level":"1.2","depth":1,"path":"BASENET/README.md","ref":"BASENET/README.md","articles":[{"title":"Residual Attention Network for Image Classification","level":"1.2.1","depth":2,"path":"BASENET/Residual_Attention_Network_for_Image_Classification.md","ref":"BASENET/Residual_Attention_Network_for_Image_Classification.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","toggle-chapters","theme-comscore","page-footer-ex","katex","github","-sharing","sharing-plus","anchor-navigation-ex","-highlight","prism","prism-themes","-lunr","-search","search-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/Magicwangs"},"page-footer-ex":{"copyright":"By [MagicWang](http://blog.magicwang.tech)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"sharing":{"qq":false,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"toggle-chapters":{},"search-plus":{}},"theme":"default","author":"Magic Wang <magicwang@zju.edu.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"BASENET/Residual_Attention_Network_for_Image_Classification.md","mtime":"2018-10-30T06:31:57.385Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-30T06:32:03.277Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
