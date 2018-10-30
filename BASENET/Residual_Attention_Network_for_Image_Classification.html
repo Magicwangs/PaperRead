@@ -21,6 +21,26 @@
                 
             
                 
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-toggle-chapters/toggle.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-page-footer-ex/style/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-katex/katex.min.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchors/plugin.css">
+                
+            
+                
+                <link rel="stylesheet" href="../gitbook/gitbook-plugin-anchor-navigation-ex/style/plugin.css">
+                
+            
+                
                 <link rel="stylesheet" href="../gitbook/gitbook-plugin-prism/prism-ghcolors.css">
                 
             
@@ -254,7 +274,7 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="residual-attention-network-for-image-classification">Residual Attention Network for Image Classification</h2>
+                                <div id="anchor-navigation-ex-navbar"><i class="fa fa-navicon"></i><ul><li><span class="title-icon "></span><a href="#residual-attention-network-for-image-classification"><b></b>Residual Attention Network for Image Classification</a></li><ul><li><span class="title-icon "></span><a href="#summary"><b></b>Summary</a></li></ul></ul></div><a href="#residual-attention-network-for-image-classification" id="anchorNavigationExGoTop"><i class="fa fa-arrow-up"></i></a><h1 id="residual-attention-network-for-image-classification"><a name="residual-attention-network-for-image-classification" class="anchor-navigation-ex-anchor" href="#residual-attention-network-for-image-classification"><i class="fa fa-link" aria-hidden="true"></i></a><a name="residual-attention-network-for-image-classification" class="plugin-anchor" href="#residual-attention-network-for-image-classification"><i class="fa fa-link" aria-hidden="true"></i></a>Residual Attention Network for Image Classification</h1>
 <ul>
 <li><strong>Authors</strong>: Fei Wang, Mengqing Jiang</li>
 <li><strong>Link</strong>: <a href="https://arxiv.org/abs/1704.06904" target="_blank">https://arxiv.org/abs/1704.06904</a></li>
@@ -262,7 +282,7 @@
 <li><strong>Year</strong>: 2017 </li>
 <li><strong>Official Code</strong>: <a href="https://github.com/fwang91/residual-attention-network" target="_blank">https://github.com/fwang91/residual-attention-network</a></li>
 </ul>
-<h2 id="summary">Summary</h2>
+<h2 id="summary"><a name="summary" class="anchor-navigation-ex-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a><a name="summary" class="plugin-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a>Summary</h2>
 <ul>
 <li>WHAT<ul>
 <li>Attention&#x673A;&#x5236;&#x4E0D;&#x4EC5;&#x4EC5;&#x53EF;&#x4EE5;&#x5E2E;&#x52A9;&#x5B9A;&#x4F4D;, &#x8FD8;&#x53EF;&#x4EE5;&#x589E;&#x5F3A;&#x7269;&#x4F53;&#x5728;&#x4E0D;&#x540C;&#x4F4D;&#x7F6E;&#x7684;&#x8868;&#x8FBE;  </li>
@@ -280,7 +300,7 @@
 <li>&#x7531;&#x4E24;&#x4E2A;&#x5206;&#x652F;&#x7EC4;&#x6210;<ul>
 <li><strong>Trunk&#x4E3B;&#x5E72;&#x5206;&#x652F;</strong>: &#x9884;&#x6FC0;&#x6D3B;&#x7684;&#x6B8B;&#x5DEE;&#x5757;(Resnet V2)  --<strong>T(x)</strong></li>
 <li><strong>Mask&#x5206;&#x652F;</strong>: bottom-up top-down &#x7ED3;&#x6784; --&#x548C; T(x) &#x76F8;&#x540C;Size&#x7684; <strong>M(x)</strong></li>
-<li>&#x6700;&#x7EC8; $H(x) = M(x)*T(x)$ &#x76F4;&#x63A5;&#x70B9;&#x4E58;    </li>
+<li>&#x6700;&#x7EC8; <span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>H</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>=</mo><mi>M</mi><mo>(</mo><mi>x</mi><mo>)</mo><mo>&#x2217;</mo><mi>T</mi><mo>(</mo><mi>x</mi><mo>)</mo></mrow><annotation encoding="application/x-tex">H(x) = M(x)*T(x)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="strut" style="height:0.75em;"></span><span class="strut bottom" style="height:1em;vertical-align:-0.25em;"></span><span class="base textstyle uncramped"><span class="mord mathit" style="margin-right:0.08125em;">H</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mrel">=</span><span class="mord mathit" style="margin-right:0.10903em;">M</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span><span class="mbin">&#x2217;</span><span class="mord mathit" style="margin-right:0.13889em;">T</span><span class="mopen">(</span><span class="mord mathit">x</span><span class="mclose">)</span></span></span></span> &#x76F4;&#x63A5;&#x70B9;&#x4E58;    </li>
 </ul>
 </li>
 <li>Attention Residual Learning<ul>
@@ -289,7 +309,7 @@
 <li>soft mask &#x53EF;&#x80FD;&#x4F1A; &#x7834;&#x574F; &#x4E3B;&#x5E72;&#x5206;&#x652F;&#x7684;&#x7279;&#x6027;  </li>
 </ul>
 </li>
-<li>&#x6240;&#x4EE5;&#x6700;&#x7EC8; $H(x) = (1+M(x)) * F(x)$ &#x5176;&#x4E2D; $0&lt;M(x)&lt;1$</li>
+<li>&#x6240;&#x4EE5;&#x6700;&#x7EC8; $H(x) = (1+M(x)) * F(x) $ &#x5176;&#x4E2D; $0&lt;M(x)&lt;1 $</li>
 </ul>
 </li>
 <li>&#x5E0C;&#x671B; mask&#x80FD;&#x591F;&#x6291;&#x5236;&#x4E3B;&#x5E72;&#x5206;&#x652F;&#x7684;&#x566A;&#x58F0;, &#x589E;&#x5F3A;&#x91CD;&#x8981;&#x7684;&#x7279;&#x5F81;  </li>
@@ -316,7 +336,7 @@ the feature contrast. </p>
 </blockquote>
 </li>
 </ul>
-
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://blog.magicwang.tech" target="_blank">MagicWang</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2018-10-30 12:21:09 </span> </footer>
                                 
                                 </section>
                             
@@ -359,7 +379,7 @@ the feature contrast. </p>
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Residual Attention Network for Image Classification","level":"1.2.1","depth":2,"next":{"title":"DETECTION","level":"1.3","depth":1,"path":"DETECTION/README.md","ref":"DETECTION/README.md","articles":[]},"previous":{"title":"BASENET","level":"1.2","depth":1,"path":"BASENET/README.md","ref":"BASENET/README.md","articles":[{"title":"Residual Attention Network for Image Classification","level":"1.2.1","depth":2,"path":"BASENET/Residual_Attention_Network_for_Image_Classification.md","ref":"BASENET/Residual_Attention_Network_for_Image_Classification.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","theme-comscore","-highlight","prism","prism-themes","-lunr","-search","search-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-ghcolors.css"]},"expandable-chapters-small":{},"prism-themes":{},"search-plus":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"fontsettings":{"theme":"white","family":"sans","size":2},"theme-comscore":{},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false}},"theme":"default","author":"Magic Wang <magicwang@zju.edu.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sidebar":{"Home":"http://blog.magicwang.tech"}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"BASENET/Residual_Attention_Network_for_Image_Classification.md","mtime":"2018-10-30T02:36:19.324Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-30T02:54:22.168Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"Residual Attention Network for Image Classification","level":"1.2.1","depth":2,"next":{"title":"DETECTION","level":"1.3","depth":1,"path":"DETECTION/README.md","ref":"DETECTION/README.md","articles":[]},"previous":{"title":"BASENET","level":"1.2","depth":1,"path":"BASENET/README.md","ref":"BASENET/README.md","articles":[{"title":"Residual Attention Network for Image Classification","level":"1.2.1","depth":2,"path":"BASENET/Residual_Attention_Network_for_Image_Classification.md","ref":"BASENET/Residual_Attention_Network_for_Image_Classification.md","articles":[]}]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","toggle-chapters","theme-comscore","page-footer-ex","katex","anchors","anchor-navigation-ex","-highlight","prism","prism-themes","-lunr","-search","search-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-ghcolors.css"]},"page-footer-ex":{"copyright":"By [MagicWang](http://blog.magicwang.tech)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"mode":"float","pageTop":{"level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false},"isRewritePageTitle":false,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right","showGoTop":true,"isShowTocTitleIcon":true,"printLog":false,"multipleH1":true,"associatedWithSummary":true,"float":{"floatIcon":"fa fa-navicon","level1Icon":"","level2Icon":"","level3Icon":"","showLevelIcon":false}},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"sharing":{"facebook":true,"twitter":true,"google":false,"weibo":false,"instapaper":false,"vk":false,"all":["facebook","google","twitter","weibo","instapaper"]},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"search-plus":{}},"theme":"default","author":"Magic Wang <magicwang@zju.edu.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","links":{"sidebar":{"Home":"http://blog.magicwang.tech"}},"gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"BASENET/Residual_Attention_Network_for_Image_Classification.md","mtime":"2018-10-30T04:21:09.266Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2018-10-30T05:05:14.179Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
@@ -370,6 +390,10 @@ the feature contrast. </p>
     
         
         <script src="../gitbook/gitbook-plugin-expandable-chapters-small/expandable-chapters-small.js"></script>
+        
+    
+        
+        <script src="../gitbook/gitbook-plugin-toggle-chapters/toggle.js"></script>
         
     
         
