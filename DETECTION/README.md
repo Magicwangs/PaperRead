@@ -11,5 +11,10 @@
     - **FP**: IoU<={0,0.1,...,1}的检测框，或者是检测到同一个GT的多余检测框的数量
     - **FN**: 没有检测到的GT的数量   
 
+- 在计算AP的过程中, 
+    - 首先需要有一个IoU阈值, 来判断这个框**是不是可以输出的框**    
+    - 然后 **再根据输出的框 和GT的IoU** 来计算 AP   
+
+
 * `R-CNN` `Object Detection` [Cascade R-CNN: Delving into High Quality Object Detection](Cascade_R_CNN.md)  
 * 
