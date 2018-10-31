@@ -2,13 +2,17 @@ section  {
     width:100%;
 }
 h1 {
+  font-size: 28px;
   color: #2674BA;
 }
 h2 {
-  color: #0099CC;
+  font-size: 22px;
+  color: #2674BA;
+/*  color: #0099CC;*/
 }
 h3 {
-  color: #F77A0B;
+  font-size: 18px;
+  color: #0099CC;
 }
 h4 {
   color: #662D91;
@@ -16,7 +20,13 @@ h4 {
 h5 {
   color: #444444;
 }
+h2, h3 {
+  margin-bottom: 14px;
+  border-bottom: 1.5px solid #eaecef;
+}
+
 th {
   background-color: #2674BA;
   color: white;
 }
+
