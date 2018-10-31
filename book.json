@@ -24,7 +24,7 @@
                 "katex",
                 "github",
                 "-sharing", "sharing-plus",
-                "anchor-navigation-ex",
+                "anchors",
                 "-highlight", "prism", "prism-themes",
                 "-lunr", "-search", "search-plus"],
     "pluginsConfig": {

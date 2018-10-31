@@ -1,12 +1,12 @@
 ## AboutGitBook
 
 ### 安装
-```shell
+```sh
 sudo npm install -g gitbook-cli
 ```
 
 ### 基本命令
-```shell
+```sh
 gitbook init 初始化仓库, 可以根据SUMMARY.md的内容自行生成目录
 gitbook build 可以不设置输出路径, 默认保存在_book目录下
 gitbook install 根据book.json下载配置插件  
@@ -39,6 +39,11 @@ git push -u coding coding-pages
 git checkout master
 ```
 
+### 修改主题
+```sh
+可以直接修改 主题的css  
+vim node_modules/gitbook-plugin-theme-comscore/book/test.css
+```
 
 ### Reference
 - [Publish GitBook to Your GitHub Pages](http://sangsoonam.github.io/2016/08/02/publish-gitbook-to-your-github-pages.html)
