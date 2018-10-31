@@ -5,7 +5,7 @@
 - **Year**: 2017 
 - **Official Code**: https://github.com/zhaoweicai/cascade-rcnn
 
-#### Motivation
+### Motivation
 <img src="IMAGE/8717KJlGcH.png" alt="drawing" width="500"/>
 
 - 在目标检测时, 需要分类和回归, 通过IoU来判断样本是否是正样本, **IoU的选取对train 和 inference的影响都很大**:
@@ -17,13 +17,13 @@
         - 如果只是 单纯的提高 IoU的阈值, 会改变正负样本的数据分布, 会导致进一步的不平衡, 导致过拟合  
 
 
-####  KeyWord
+###  KeyWord
 - a single detector can only be _optimal for a single quality level_.    
 -  inference-time **mismatch** between the
 IoUs for which the detector is optimal and those of the input hypotheses.  
 - the output of a detector trained with a certain IoU threshold is a good distribution to train the detector of the next higher IoU threshold.
 
-#### Detail
+### Detail
 
 
 
