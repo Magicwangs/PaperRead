@@ -13,8 +13,9 @@
 
 - 在计算AP的过程中, 
     - 首先需要有一个IoU阈值, 来判断这个框**是不是可以输出的框**    
-    - 然后 **再根据输出的框 和GT的IoU** 来计算 AP   
+    - 然后 **再根据输出的框 和GT的IoU** 来计算 AP     
 
-* `wrt`: with respect to 的缩写, 相对于  
+
+* `wrt`: with respect to 的缩写, 相对于
 * `R-CNN` `Object Detection` [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](Faster_R_CNN.md)
 * `R-CNN` `Object Detection` [Cascade R-CNN: Delving into High Quality Object Detection](Cascade_R_CNN.md)  
