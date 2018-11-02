@@ -30,7 +30,7 @@
 <img src="IMAGE/20160925223430242" alt="drawing" width="400"/>
 图c是通过ensemble不同 IoU阈值的detector, 但是inference的时候需要ensemble,没有根本上改变这个问题  
 
-- 每个阶段都需要 $$∆ = (δx, δy, δw, δh)$$ be normalized by its mean and variance for effective multi-task learning.    
+- 每个阶段都需要 对偏移 $$(x, y, w, h)$$ be normalized by its mean and variance for effective multi-task learning.     
 - 每个阶段的损失包括分类和回归损失   
 - Cascade R-CNN实际上有四个阶段, 一个RPN和三个Detection(分别选择阈值为 0.5,0.6,0.7的), 在RPN阶段还是和faster rcnn一样, 2000个框,iou阈值为0.7, 剩下的三个Detector就是直接在 输出的 2000个框中 迭代回归, 分类的阈值就是0.5, 每个阶段都是新的$$roi pooling+2*fc+(cls/reg)$$     
 
