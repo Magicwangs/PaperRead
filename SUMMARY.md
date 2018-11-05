@@ -6,6 +6,7 @@
 * [DETECTION](DETECTION/README.md)
     * [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](DETECTION/Faster_R_CNN.md)
     * [Cascade R-CNN: Delving into High Quality Object Detection](DETECTION/Cascade_R_CNN.md)
+    * [DetNet: A Backbone network for Object Detection](DETECTION/DetNet.md)
 * [3D](3D/README.md)
 * [MORE](MORE/README.md)
     * [Batch Norm](MORE/More_Batch_Norm.md)

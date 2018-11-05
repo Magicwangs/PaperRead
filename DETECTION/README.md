@@ -19,3 +19,4 @@
 * `wrt`: with respect to 的缩写, 相对于
 * `R-CNN` `Object Detection` [Faster R-CNN: Towards Real-Time Object Detection with Region Proposal Networks](Faster_R_CNN.md)
 * `R-CNN` `Object Detection` [Cascade R-CNN: Delving into High Quality Object Detection](Cascade_R_CNN.md)  
+* `BackBone`[DetNet: A Backbone network for Object Detection](DetNet.md)
