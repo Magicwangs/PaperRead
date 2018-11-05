@@ -20,7 +20,7 @@
 
 ###  KeyWord
 - a single detector can only be optimal for a single quality level.    
-- the output of a detector trained with a certain IoU threshold **is a good distribution to train** the detector of **the next higher IoU** threshold.  
+- the output of a detector trained with a certain IoU threshold ==is a good distribution to train== the detector of **the next higher IoU** threshold.  
 -  the resampling procedure of the Cascade R-CNN does not aim to mine hard negatives. Instead, by **adjusting bounding boxes**, each stage aims to find a good set of close false positives for training the next stage.   
 
 ### Detail
