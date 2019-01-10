@@ -6,7 +6,7 @@
 - **Official Code**: Not Official Released
 - **Implementation**: https://github.com/tsing-cv/DetNet
 
-#### Motivation
+### Motivation
 - BackBone For Object Detection Need:
     - 相对与图片分类, 需要更多的中间层(FPN,RetinaNet)
     - 目标检测 除了 识别目标, 还需要定位目标
@@ -18,7 +18,7 @@
     - 小物体的丢失 
 
 
-#### Detail
+### Detail
 - 两个问题
     - 保留较高的分辨率会带来计算量和内存消耗的增加
     - 不下采样, 语义信息不够
