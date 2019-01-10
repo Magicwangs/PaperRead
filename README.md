@@ -23,6 +23,7 @@
 
 - face++组工作介绍
 - 目标检测还有什么好做的？
+- Scale-Aware Trident Networks for Object Detection
 
 
 
