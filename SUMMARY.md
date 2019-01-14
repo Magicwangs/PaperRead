@@ -9,7 +9,7 @@
     * [DetNet: A Backbone network for Object Detection](DETECTION/DetNet.md)
 * [3D](3D/README.md)
 * [MORE](MORE/README.md)
-    * [Batch Norm](MORE/More_Batch_Norm.md)
     * [About GitBook](MORE/AboutGitBook.md)
+    * [Batch Norm](MORE/More_Batch_Norm.md)
     * [张小龙微信公开课2019](MORE/WeChat.md)
     * [以静制动 Dynamic Batching](MORE/DynamicBatching.md)
