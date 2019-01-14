@@ -26,5 +26,7 @@
 - Scale-Aware Trident Networks for Object Detection
 
 
+- 卡尔曼滤波、匈牙利匹配算法多目标追踪
+
 
 
