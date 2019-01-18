@@ -13,3 +13,4 @@
     * [Batch Norm](MORE/More_Batch_Norm.md)
     * [张小龙微信公开课2019](MORE/WeChat.md)
     * [以静制动 Dynamic Batching](MORE/DynamicBatching.md)
+    * [MXNet Design Concepts](MORE/MXNet_Adventures.md)
