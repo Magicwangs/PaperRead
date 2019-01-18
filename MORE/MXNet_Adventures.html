@@ -4,7 +4,7 @@
     <head>
         <meta charset="UTF-8">
         <meta content="text/html; charset=utf-8" http-equiv="Content-Type">
-        <title>Batch Norm · Sample GitBook</title>
+        <title>MXNet Design Concepts · Sample GitBook</title>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="description" content="">
         <meta name="generator" content="GitBook 3.2.3">
@@ -81,10 +81,8 @@
     <link rel="shortcut icon" href="../gitbook/images/favicon.ico" type="image/x-icon">
 
     
-    <link rel="next" href="WeChat.html" />
     
-    
-    <link rel="prev" href="AboutGitBook.html" />
+    <link rel="prev" href="DynamicBatching.html" />
     
 
     </head>
@@ -256,7 +254,7 @@
             
         </li>
     
-        <li class="chapter active" data-level="1.5.2" data-path="More_Batch_Norm.html">
+        <li class="chapter " data-level="1.5.2" data-path="More_Batch_Norm.html">
             
                 <a href="More_Batch_Norm.html">
             
@@ -295,7 +293,7 @@
             
         </li>
     
-        <li class="chapter " data-level="1.5.5" data-path="MXNet_Adventures.html">
+        <li class="chapter active" data-level="1.5.5" data-path="MXNet_Adventures.html">
             
                 <a href="MXNet_Adventures.html">
             
@@ -343,7 +341,7 @@
     <!-- Title -->
     <h1>
         <i class="fa fa-circle-o-notch fa-spin"></i>
-        <a href=".." >Batch Norm</a>
+        <a href=".." >MXNet Design Concepts</a>
     </h1>
 </div>
 
@@ -358,23 +356,66 @@
     
                                 <section class="normal markdown-section">
                                 
-                                <h2 id="&#x6211;&#x77E5;&#x9053;&#x7684;&#x5173;&#x4E8E;bn&#x7684;&#x4E00;&#x5207;"><a name="&#x6211;&#x77E5;&#x9053;&#x7684;&#x5173;&#x4E8E;bn&#x7684;&#x4E00;&#x5207;" class="plugin-anchor" href="#&#x6211;&#x77E5;&#x9053;&#x7684;&#x5173;&#x4E8E;bn&#x7684;&#x4E00;&#x5207;"><i class="fa fa-link" aria-hidden="true"></i></a>&#x6211;&#x77E5;&#x9053;&#x7684;&#x5173;&#x4E8E;BN&#x7684;&#x4E00;&#x5207;</h2>
+                                <h2 id="mxnet-design-concepts"><a name="mxnet-design-concepts" class="plugin-anchor" href="#mxnet-design-concepts"><i class="fa fa-link" aria-hidden="true"></i></a>MXNet Design Concepts</h2>
 <ul>
 <li><strong>Authors</strong>: Magic</li>
-<li><strong>Tags</strong>: <code>BatchNorm</code> </li>
+<li><strong>Link</strong>: <a href="https://mxnet.incubator.apache.org/architecture/index.html" target="_blank">https://mxnet.incubator.apache.org/architecture/index.html</a></li>
+<li><strong>Tags</strong>: <code>MXNet</code> </li>
 <li><strong>Year</strong>: Alive</li>
 </ul>
-<h2 id="summary"><a name="summary" class="plugin-anchor" href="#summary"><i class="fa fa-link" aria-hidden="true"></i></a>Summary</h2>
+<h3 id="need-know"><a name="need-know" class="plugin-anchor" href="#need-know"><i class="fa fa-link" aria-hidden="true"></i></a>Need Know</h3>
 <ul>
-<li>WHAT</li>
-<li>HOW</li>
-<li><p>DETAIL</p>
+<li><code>DMLC</code>&#xFF1A; Distributed (Deep) Machine Learning Community, A Community of Awesome Machine Learning Projects</li>
+</ul>
+<h3 id="dependency-engine-for-deep-learning"><a name="dependency-engine-for-deep-learning" class="plugin-anchor" href="#dependency-engine-for-deep-learning"><i class="fa fa-link" aria-hidden="true"></i></a>Dependency Engine for Deep Learning</h3>
+<ul>
+<li>Dependency Scheduling: &#x5C3D;&#x53EF;&#x80FD;&#x505A;&#x5230;&#x5E76;&#x884C;&#x64CD;&#x4F5C;   <ul>
+<li>&#x96BE;&#x70B9;&#xFF1A;<ul>
+<li>&#x6570;&#x636E;&#x6D41;&#x56FE;&#x4E2D;&#x4F9D;&#x8D56;&#x7684;&#x5904;&#x7406;</li>
+<li>&#x5185;&#x5B58;&#x7684;&#x56DE;&#x6536;</li>
+<li>&#x968F;&#x673A;&#x6570;&#x7684;&#x751F;&#x6210;&#x5FC5;&#x987B;&#x4E32;&#x884C;</li>
+</ul>
 </li>
-<li><p><a href="https://tkv.io/posts/fusing-batchnorm-and-conv/" target="_blank">need read</a></p>
+<li>Case Study<ul>
+<li>&#x9010;&#x5C42;&#x7684;&#x8BA1;&#x7B97;</li>
+<li>There is a delay in computation <strong>between the last backward pass to layer k and the next forward call to layer k</strong>. We can synchronize the weight of layer k in <strong>parallel</strong> with other computation during this delay.</li>
+<li>&#x591A;GPU&#x7684;&#x53C2;&#x6570;&#x66F4;&#x65B0;&#x5927;&#x81F4;&#x5206;&#x4E3A;&#x4E24;&#x6B65;&#x4E00;&#x4E2A;&#x662F;&#x591A;gpu&#x5404;&#x81EA;&#x8BA1;&#x7B97;&#x68AF;&#x5EA6;&#x56DE;&#x4F20;&#xFF0C;&#x7136;&#x540E;&#x540C;&#x6B65;&#x5404;&#x4E2A;gpu&#x76F8;&#x540C;&#x5C42;&#x7684;&#x53C2;&#x6570;</li>
+<li>&#x591A;GPU&#x4E4B;&#x95F4;layer k&#x7684;weight&#x7684;&#x540C;&#x6B65;&#x4F1A;&#x5728;&#x4E0B;&#x6B21;&#x524D;&#x5411;&#x4F20;&#x64AD;&#x5230;&#x6765;&#x4E4B;&#x524D;&#x8FDB;&#x884C;</li>
+</ul>
 </li>
 </ul>
-<p>bn&#x7684;&#x4E3B;&#x8981;&#x4F5C;&#x7528;&#x662F;&#x63A7;&#x5236;&#x6570;&#x503C;&#x533A;&#x95F4;&#xFF0C;&#x8BA9;&#x6BD4;&#x8F83;&#x6DF1;&#x7684;&#x7F51;&#x7EDC;&#x8BAD;&#x7EC3;&#x8D77;&#x6765;&#x7A33;&#x5B9A;&#x6027;&#x6BD4;&#x8F83;&#x597D;&#xFF0C;&#x66F4;&#x4E0D;&#x5BB9;&#x6613;&#x7206;&#x70B8;&#x3002;&#x4F46;&#x662F;&#x521D;&#x59CB;&#x5316;&#x548C;&#x8C03;&#x53C2;&#x5176;&#x5B9E;&#x53EF;&#x4EE5;&#x90E8;&#x5206;&#x89E3;&#x51B3;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#xFF0C;&#x80FD;&#x4E0D;&#x7528;bn&#x7684;&#x65F6;&#x5019;&#x8FD8;&#x662F;&#x5C3D;&#x91CF;&#x4E0D;&#x8981;&#x7528;&#xFF0C;&#x5C24;&#x5176;&#x662F;&#x505A;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x95EE;&#x9898;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x4E0D;&#x8981;&#x60F3;&#x5F53;&#x7136;&#x5C31;&#x628A;bn&#x585E;&#x8FDB;&#x53BB;&#x3002;</p>
-<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://blog.magicwang.tech" target="_blank">MagicWang</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2019-01-14 21:38:10 </span> </footer>
+</li>
+<li>&#x5927;&#x81F4;&#x7684;&#x64CD;&#x4F5C;&#xFF1A;<ul>
+<li>&#x5C06;&#x4E24;&#x79CD;&#x6807;&#x7B7E;&#x6765;&#x8868;&#x793A;&#x5BF9;&#x53D8;&#x91CF;&#x7684;&#x4F9D;&#x8D56;&#x5206;&#x4E3A;&#x4E24;&#x79CD;&#xFF1A;<ul>
+<li>read_vars: &#x53D8;&#x91CF;&#x4E2D;&#x95F4;&#x6CA1;&#x6709;&#x6539;&#x53D8;</li>
+<li>mutate_vars: &#x53D8;&#x91CF;&#x4F1A;&#x5728;&#x64CD;&#x4F5C;&#x4E2D;&#x53D1;&#x751F;&#x6539;&#x53D8;   </li>
+</ul>
+</li>
+<li>&#x4E3A;&#x6BCF;&#x4E2A;&#x53D8;&#x91CF;&#x751F;&#x6210;&#x4E00;&#x4E2A;&#x4F9D;&#x8D56;&#x7684;&#x961F;&#x5217;&#xFF0C;read_vars&#x53EF;&#x4EE5;&#x540C;&#x6B65;&#x7684;&#x8BFB;&#x53D6;    </li>
+</ul>
+</li>
+</ul>
+<h3 id="optimizing-memory-consumption-in-deep-learning"><a name="optimizing-memory-consumption-in-deep-learning" class="plugin-anchor" href="#optimizing-memory-consumption-in-deep-learning"><i class="fa fa-link" aria-hidden="true"></i></a>Optimizing Memory Consumption in Deep Learning</h3>
+<ul>
+<li><strong>&#x663E;&#x5F0F;&#x53CD;&#x5411;&#x8DEF;&#x5F84;&#x6CD5;</strong>: &#x6B63;&#x5411;&#x4F20;&#x9012;&#x548C;&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x4E0D;&#x5728;&#x540C;&#x4E00;&#x5F20;&#x56FE;&#x4E0A; <ul>
+<li>&#x8282;&#x7701;&#x5185;&#x5B58;&#xFF0C;&#x53EF;&#x4EE5;&#x8DD1;&#x5B8C;&#x8282;&#x70B9;&#x5C31;&#x91CA;&#x653E;&#x5185;&#x5B58;&#xFF0C;&#x5982;&#x679C;&#x516C;&#x7528;&#x9700;&#x8981;&#x4E00;&#x76F4;&#x5360;&#x7740;</li>
+<li>&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x7684;&#x8DEF;&#x5F84;&#x4E5F;&#x53EF;&#x4EE5;&#x4F18;&#x5316;&#xFF0C;&#x4E0D;&#x4E00;&#x5B9A;&#x8981;&#x662F;&#x4E00;&#x4E2A;&#x6B63;&#x5411;&#x7684;&#x955C;&#x50CF;</li>
+</ul>
+</li>
+<li>&#x53CD;&#x5411;&#x4F20;&#x64AD;&#x548C;&#x6B63;&#x5411;&#x4F20;&#x9012;&#x5C31;&#x53D8;&#x6210;&#x4E86;&#x76F8;&#x540C;&#x7684;&#x95EE;&#x9898;</li>
+<li>&#x5185;&#x5B58;&#x4F18;&#x5316;&#x7684;&#x601D;&#x8DEF;&#xFF1A;<ul>
+<li>In-place Operations: &#x5C31;&#x662F;&#x8F93;&#x5165;&#x8F93;&#x51FA;&#x5171;&#x7528;&#x540C;&#x4E00;&#x7247;&#x5185;&#x5B58;&#xFF0C;&#x524D;&#x63D0;&#x662F;&#x8F93;&#x5165;&#x53D8;&#x91CF;&#x4E0D;&#x518D;&#x88AB;&#x5176;&#x4ED6;&#x6240;&#x4F9D;&#x8D56;   </li>
+<li>Standard Memory Sharing: &#x91CD;&#x590D;&#x4F7F;&#x7528;&#x524D;&#x9762;&#x5DF2;&#x7ECF;&#x4E0D;&#x4F1A;&#x518D;&#x88AB;&#x4F7F;&#x7528;&#x7684;&#x5185;&#x5B58;&#xFF0C;&#x5982;&#x679C;&#x8FD9;&#x4E24;&#x4E2A;&#x5171;&#x4EAB;&#x5185;&#x5B58;&#x7684;&#x6BD4;&#x53D8;&#x91CF;&#x4E0D;&#x4E00;&#x6837;&#x5927;&#xFF0C;&#x4E00;&#x822C;&#x4F1A;&#x6309;&#x7167;&#x5927;&#x7684;&#x90A3;&#x4E2A;&#x5185;&#x5B58;&#x5206;&#x914D;&#x7A7A;&#x95F4;  </li>
+</ul>
+</li>
+<li>&#x5185;&#x5B58;&#x4F18;&#x5316;&#x91CD;&#x70B9;&#x8003;&#x8651;&#x7684;&#x662F;&#x6BCF;&#x4E2A;&#x91CF;&#x7684;&#x751F;&#x547D;&#x5468;&#x671F;&#xFF0C;&#x7C7B;&#x4F3C;&#x4E8E;&#x7F16;&#x8BD1;&#x5668;&#xFF0C;&#x800C;&#x4E14;&#x5728;&#x5185;&#x5B58;&#x4F18;&#x5316;&#x7684;&#x8FC7;&#x7A0B;&#x4E2D;&#x8981;&#x4F18;&#x5148;&#x4FDD;&#x8BC1;&#x5B89;&#x5168;&#x548C;&#x6B63;&#x786E;&#xFF0C;&#x540C;&#x4E8B;&#x5C3D;&#x91CF;&#x5141;&#x8BB8;&#x66F4;&#x591A;&#x7684;&#x5E76;&#x884C;&#xFF0C;</li>
+</ul>
+<h3 id="designing-efficient-data-loaders-for-deep-learning"><a name="designing-efficient-data-loaders-for-deep-learning" class="plugin-anchor" href="#designing-efficient-data-loaders-for-deep-learning"><i class="fa fa-link" aria-hidden="true"></i></a>Designing Efficient Data Loaders for Deep Learning</h3>
+<ul>
+<li>&#x540C;&#x6837;&#x7684;&#x6570;&#x636E;&#xFF0C;&#x5C01;&#x88C5;&#x6210;&#x5927;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x6BD4;&#x5C0F;&#x6587;&#x4EF6;&#x66F4;&#x597D;&#xFF0C;&#x907F;&#x514D;&#x4E86;&#x5C0F;&#x6587;&#x4EF6;&#x8BFB;&#x53D6;&#x7684;&#x5BFB;&#x5740;&#x65F6;&#x95F4;&#xFF01;&#xFF01;</li>
+<li>&#x800C;&#x4E14;&#x6253;&#x5305;&#x540E;&#x53EF;&#x4EE5;&#x8282;&#x7701;&#x90E8;&#x5206;&#x7A7A;&#x95F4;  </li>
+</ul>
+<footer class="page-footer-ex"> <span class="page-footer-ex-copyright"> By <a href="http://blog.magicwang.tech" target="_blank">MagicWang</a>&#xFF0C;&#x4F7F;&#x7528;<a href="https://creativecommons.org/licenses/by-sa/4.0/" target="_blank">&#x77E5;&#x8BC6;&#x5171;&#x4EAB; &#x7F72;&#x540D;-&#x76F8;&#x540C;&#x65B9;&#x5F0F;&#x5171;&#x4EAB; 4.0&#x534F;&#x8BAE;</a>&#x53D1;&#x5E03; </span> &#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0;&#xA0; <span class="page-footer-ex-footer-update"> &#x6B64;&#x9875;&#x9762;&#x4FEE;&#x8BA2;&#x4E8E;&#xFF1A; 2019-01-18 17:17:08 </span> </footer>
                                 
                                 </section>
                             
@@ -401,14 +442,10 @@
 
             
                 
-                <a href="AboutGitBook.html" class="navigation navigation-prev " aria-label="Previous page: About GitBook">
+                <a href="DynamicBatching.html" class="navigation navigation-prev navigation-unique" aria-label="Previous page: 以静制动 Dynamic Batching">
                     <i class="fa fa-angle-left"></i>
                 </a>
                 
-                
-                <a href="WeChat.html" class="navigation navigation-next " aria-label="Next page: 张小龙微信公开课2019">
-                    <i class="fa fa-angle-right"></i>
-                </a>
                 
             
         
@@ -417,7 +454,7 @@
     <script>
         var gitbook = gitbook || [];
         gitbook.push(function() {
-            gitbook.page.hasChanged({"page":{"title":"Batch Norm","level":"1.5.2","depth":2,"next":{"title":"张小龙微信公开课2019","level":"1.5.3","depth":2,"path":"MORE/WeChat.md","ref":"MORE/WeChat.md","articles":[]},"previous":{"title":"About GitBook","level":"1.5.1","depth":2,"path":"MORE/AboutGitBook.md","ref":"MORE/AboutGitBook.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","toggle-chapters","theme-comscore","page-footer-ex","katex","github","-sharing","sharing-plus","anchors","-highlight","prism","prism-themes","-lunr","-search","search-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/Magicwangs"},"page-footer-ex":{"copyright":"By [MagicWang](http://blog.magicwang.tech)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"isShowTocTitleIcon":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"sharing":{"qq":false,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"search-plus":{}},"theme":"default","author":"Magic Wang <magicwang@zju.edu.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"MORE/More_Batch_Norm.md","mtime":"2019-01-14T13:38:10.521Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T09:18:48.008Z"},"basePath":"..","book":{"language":""}});
+            gitbook.page.hasChanged({"page":{"title":"MXNet Design Concepts","level":"1.5.5","depth":2,"previous":{"title":"以静制动 Dynamic Batching","level":"1.5.4","depth":2,"path":"MORE/DynamicBatching.md","ref":"MORE/DynamicBatching.md","articles":[]},"dir":"ltr"},"config":{"plugins":["expandable-chapters-small","toggle-chapters","theme-comscore","page-footer-ex","katex","github","-sharing","sharing-plus","anchors","-highlight","prism","prism-themes","-lunr","-search","search-plus"],"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"pluginsConfig":{"prism":{"css":["prismjs/themes/prism-ghcolors.css"]},"github":{"url":"https://github.com/Magicwangs"},"page-footer-ex":{"copyright":"By [MagicWang](http://blog.magicwang.tech)，使用[知识共享 署名-相同方式共享 4.0协议](https://creativecommons.org/licenses/by-sa/4.0/)发布","markdown":true,"update_format":"YYYY-MM-DD HH:mm:ss","update_label":"此页面修订于："},"sharing-plus":{"qq":false,"all":["facebook","google","twitter","instapaper","linkedin","pocket","stumbleupon"],"douban":false,"facebook":true,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":true,"messenger":false,"line":false,"vk":false,"pocket":true,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"katex":{},"fontsettings":{"theme":"white","family":"sans","size":2},"anchor-navigation-ex":{"isRewritePageTitle":false,"isShowTocTitleIcon":true,"showLevel":false,"tocLevel1Icon":"fa fa-hand-o-right","tocLevel2Icon":"fa fa-hand-o-right","tocLevel3Icon":"fa fa-hand-o-right"},"theme-comscore":{},"prism-themes":{},"expandable-chapters-small":{},"sharing":{"qq":false,"douban":false,"facebook":false,"weibo":false,"instapaper":false,"whatsapp":false,"hatenaBookmark":false,"twitter":false,"messenger":false,"line":false,"vk":false,"pocket":false,"google":false,"viber":false,"stumbleupon":false,"qzone":false,"linkedin":false},"theme-default":{"styles":{"website":"styles/website.css","pdf":"styles/pdf.css","epub":"styles/epub.css","mobi":"styles/mobi.css","ebook":"styles/ebook.css","print":"styles/print.css"},"showLevel":false},"anchors":{},"toggle-chapters":{},"search-plus":{}},"theme":"default","author":"Magic Wang <magicwang@zju.edu.cn>","pdf":{"pageBreaksBefore":"/","headerTemplate":null,"paperSize":"a4","margin":{"right":62,"left":62,"top":36,"bottom":36},"fontSize":12,"fontFamily":"Arial","footerTemplate":null,"chapterMark":"pagebreak","pageNumbers":false},"structure":{"langs":"LANGS.md","readme":"README.md","glossary":"GLOSSARY.md","summary":"SUMMARY.md"},"variables":{},"title":"Sample GitBook","gitbook":"*","description":"This is a sample book created by gitbook","extension":null},"file":{"path":"MORE/MXNet_Adventures.md","mtime":"2019-01-18T09:17:08.866Z","type":"markdown"},"gitbook":{"version":"3.2.3","time":"2019-01-18T09:18:48.008Z"},"basePath":"..","book":{"language":""}});
         });
     </script>
 </div>
