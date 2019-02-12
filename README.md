@@ -15,57 +15,17 @@
   - Mining Point Cloud Local Structures by Kernel Correlation and Graph Pooling   
 - R-FCN系列， SSD系列， Yolo系列    
 - STDN: Scale-Transferrable Object Detection   
-- Check一下之前遗漏的    
 - ECCV2018目标检测（object detection）算法总览    
 - CVPR2018 目标检测算法总览(最新的目标检测论文)   
-
-- 规划一下论文的思路    
 
 - face++组工作介绍
 - 目标检测还有什么好做的？
 - Scale-Aware Trident Networks for Object Detection
 
-
 - 卡尔曼滤波、匈牙利匹配算法多目标追踪
-
 
 - Class-Balanced Loss Based on Effective Number of Sample
 
-
-[1] 商汤 COCO2018 检测任务冠军方案文章 
-
-Winning entry of COCO 2018 Challenge (object detection task)
-
-Hybrid Task Cascade for Instance Segmentation
-
-https://arxiv.org/abs/1901.07518
-
-
-
-[2] 小米用NAS做超分的技术报告
-
-Fast, Accurate and Lightweight Super-Resolution with Neural Architecture Search
-
-https://arxiv.org/abs/1901.07261
-
-
-
-[3] 目标检测文章
-
-Consistent Optimization for Single-Shot Object Detection
-
-https://arxiv.org/abs/1901.06563
-
-
-
-[4] 商汤的不均衡样本分类文章
-
-Dynamic Curriculum Learning for Imbalanced Data Classification
-
-https://arxiv.org/abs/1901.06783
-
-
--  Gradient Harmonized Single-stage Detector
 -  RoarNet: A Robust 3D Object Detection based on RegiOn Approximation Refinement
 -  [VoxelNet: End-to-End Learning for Point Cloud Based 3D Object Detection](https://arxiv.org/abs/1711.06396)
 - [3d fully convolutional network for vehicle detection in point cloud](https://arxiv.org/abs/1611.08069)
@@ -91,3 +51,5 @@ https://arxiv.org/abs/1901.06783
 学习C++的时候，学这个    
 - [Dijkstra最短距离算法]()
 
+
+NAdam了解一下   
