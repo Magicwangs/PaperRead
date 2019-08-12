@@ -9,14 +9,10 @@
 - 各个norm方式的整理   
 - 各个优化方式的整理   
 - 邓丹 MLY-zh-cn.pdf
-- Pixor: Real-time 3d object detection from point clouds.
-
-
-- test
 
 - pointnet思路的系列
   - Mining Point Cloud Local Structures by Kernel Correlation and Graph Pooling   
-
+  
 - STDN: Scale-Transferrable Object Detection   
 - ECCV2018目标检测（object detection）算法总览    
 - CVPR2018 目标检测算法总览(最新的目标检测论文)   
