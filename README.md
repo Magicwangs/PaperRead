@@ -11,6 +11,9 @@
 - 邓丹 MLY-zh-cn.pdf
 - Pixor: Real-time 3d object detection from point clouds.
 
+
+- test
+
 - pointnet思路的系列
   - Mining Point Cloud Local Structures by Kernel Correlation and Graph Pooling   
 
